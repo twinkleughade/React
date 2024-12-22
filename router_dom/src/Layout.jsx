@@ -1,0 +1,7 @@
+const Layout=()=>{
+    return(
+        <>
+        
+        </>
+    )
+}

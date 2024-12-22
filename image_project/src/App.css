@@ -1,0 +1,13 @@
+#hero{
+    display: flex; 
+    background-color: yellow;
+}
+#hero article{
+    margin: 40px;
+    padding: 40px;
+}
+#hero article img{
+    width: 300px;
+    height: 300px;
+}
+
