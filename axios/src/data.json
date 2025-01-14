@@ -1,0 +1,39 @@
+{
+  "student": [
+    {
+      "name": "twinkle",
+      "age": 26,
+      "contact": 12334,
+      "city": "Bhopal",
+      "id": "dc9e"
+    },
+    {
+      "name": "twi",
+      "age": 26,
+      "contact": 12334,
+      "city": "Bhopal",
+      "id": "dc60"
+    },
+    {
+      "name": "twink",
+      "age": 26,
+      "contact": 12334,
+      "city": "Bhopal",
+      "id": "b813"
+    },
+    {
+      "id": "d72d",
+      "name": "twinkle",
+      "age": "26",
+      "contact": "06267002715",
+      "city": "Bhopal"
+    },
+    {
+      "id": "2e52",
+      "name": "twinkle",
+      "age": "26",
+      "contact": "06267002715",
+      "city": "Betul"
+    }
+  ]
+}

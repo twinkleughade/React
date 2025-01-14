@@ -1,0 +1,614 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+.navbar{
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 70px; 
+  border: 1px solid rgb(243, 231, 231);
+  font-family: Moderustic;
+}
+
+
+.navbar div a{
+ text-decoration: none;
+ color: black;
+ font-size: 40px;
+ font-weight: bold;
+ font-style: initial;
+}
+
+.navbar div img{
+  width: 150px;
+  height: 70px;
+}
+.navbar ul{
+  display: flex;     
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar ul li{
+  list-style-type: none;
+  align-items: center; 
+  display: inline-block ;   
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  margin: 70px;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;       
+}
+.navbar .bar a i{
+  font-size: 20px;
+  border: 1px solid black;
+  padding: 5px;
+  transition: .6s;
+  display: none;
+} 
+
+
+.header1{
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(bg.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  z-index: 1;
+  position: relative;
+}
+.navbar .phonenav{
+  display: none;
+}
+
+@media(max-width:768px){
+  .navbar .bar a i{
+      display: block;
+  }
+  .navbar ul{
+      display: none;    
+  }
+}
+
+
+
+.header1{
+  height: 80vh !important;
+  align-items: center;
+  justify-content: center !important;
+}
+
+.hcontainer{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 130px;
+  padding-left: 400px;
+  width: 1100px;
+}
+
+.hcontainer h1{
+  font-size: 42px;
+  color: white;
+  line-height: 40px;
+}
+
+.hcontainer small{
+  color: black;
+  font-size: 20px;
+}
+
+.hcontainer form{
+  padding: 5px 45px;
+  background-color: white;
+  border-radius: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hcontainer form .headinp{
+  width: 100%;
+  display: flex;
+  flex-direction: column; 
+  gap: 5px; 
+  padding: 0 10px; 
+}
+
+.hcontainer form .headinp:nth-child(2){
+      border-right: 0.2px solid black;
+      border-left: 0.2px solid black;
+  }
+
+.hcontainer .headinp label{
+  font-size: 15px;
+}
+.hcontainer .headinp input{
+  height: 20px;
+  border: none;
+  outline: none;
+  color: rgb(16, 16, 36);
+}
+
+.hcontainer button{
+  background-color:white !important;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 15px 10px;
+  margin-left: 30px;
+  border-radius: 60px;
+  cursor: pointer;
+  color: black;
+  transition: .6s;
+  border: none;
+}
+.hcontainer button:hover{
+  background-color: black !important;
+  color: white;
+}
+
+@media(max-width:1024px){
+  .hcontainer{
+      gap: 20px;
+      padding-top: 150px;
+      padding-left: 250px;
+      width: 830px;
+   }
+}
+@media(max-width:768px){
+  .hcontainer{
+      padding-top: 130px;
+      padding-left: 100px;
+      width: 650px;
+   }
+}
+@media(max-width:426px){
+   .hcontainer form{
+      flex-direction: column;
+      border-radius: 12px;
+      margin-top: 20px;
+      padding: 15px 25px;
+      background-color: white;
+      border-radius: 60px;
+      width: 100%;
+   }
+   .hcontainer button{
+      width: 100%;
+      justify-content: center;
+   }
+   .hcontainer form .headinp:nth-child(2){
+      border: none;
+  }
+  .hcontainer{
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      padding-top: 80px;
+      padding-left: 75px;
+      width: 350px;
+   }
+   .hcontainer h1{
+      font-size: 25px;
+      line-height: 20px;
+   }
+  
+   .hcontainer small{
+      font-size: 15px;
+   }
+
+}
+
+@media(max-width:426px){
+
+  .navbar div a{
+      font-size: 20px;
+   }
+   .navbar{
+      padding: 0 40px;
+  }
+  .hcontainer form{
+     margin-top: 20px;
+     padding: 10px 20px;
+     border-radius: 40px;
+  }
+ .hcontainer{
+     gap: 10px;
+     padding-top: 80px;
+     padding-left: 45px;
+     width: 300px;
+  }
+  .hcontainer h1{
+     font-size: 20px;
+     line-height: 15px;
+  }
+ 
+  .hcontainer small{
+     font-size: 15px;
+  }
+
+}
+
+.section_heading{
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: auto;
+}
+.grid .card{
+  display: flex;
+  margin: 20px;
+  padding: 10px 80px;
+}
+.grid .card img{
+  width: 400px;
+  height: 400px;
+}
+
+
+.card-body{
+  display: block;
+  margin: 50px;
+}
+.card-body h5{
+  font-size: 40px;
+  color: black;
+  text-align: center;
+}
+.card-body p{
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  font-family: sans-serif;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.card-body a{
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  border: 1px solid grey;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 60px;
+  padding: 5px;
+  margin-left: 350px;
+  
+}
+
+footer .flogo div img{
+  width: 150px;
+  height: 70px;
+}
+footer{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white; 
+  width: 100%;
+  height: 30vh;
+  border: 1px solid grey;
+}
+
+footer .address div a{
+text-decoration: none;
+color: black;
+font-size: 20px;
+}
+
+footer .follow div{
+text-decoration: none;
+color: black;
+font-size: 20px;
+}
+
+footer .address div{
+  font-size: 20px;
+}
+
+footer .flogo{
+  font-size: 30px;
+  font-weight: bold;
+  font-family: moderustic;
+}
+
+@media(max-width:768px){
+footer article div img{
+  width: 100px;
+  height: 100px;
+}
+
+}
+@media(max-width:425px){
+footer article div img{
+  display: none;
+}
+footer .address div a{
+  text-decoration: none;
+  color: black;
+  font-size: 10px;
+  display: flex;
+}
+
+footer .follow div a{
+  text-decoration: none;
+  color: black;
+  font-size: 9px;
+ 
+}
+footer  article .follow div {
+  text-decoration: none;
+  color: black;
+  font-size: 9px;
+  display: flex;
+}
+
+footer article{
+  margin: 9px;
+}
+}
+
+/* /about */
+.about-page .about-header{
+  padding: 30px;
+  background-image: url(about.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-page .about-header h1{
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+.about-page .about-header p{
+  font-size: 25px;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 15px;
+  color: white;
+}
+
+.about-story h2{
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  padding-top: 50px;
+  text-decoration: underline;
+}
+
+.about-story .grid1{
+  display: flex;
+  padding: 5px;
+}
+
+.about-story .grid1 img{
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+}
+
+.about-story .grid1 p{
+  font-size: 30px;
+  padding-top: 90px;
+  align-items: center;
+  text-align: center;
+  padding-left: 70px;
+}
+
+.about-offerings h2{
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  padding-top: 50px;
+  text-decoration: underline;
+}
+
+.about-offerings .grid1{
+  display: flex;
+  padding: 5px;
+} 
+
+.about-offerings .grid1 img{
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+}
+
+.about-offerings .grid1 ul li{
+  font-size: 25px;
+  padding-top: 30px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  text-align: start;
+  padding-left: 70px;
+}
+.about-offerings .grid1 ul
+{
+  padding-top: 50px;
+}
+
+.about-commitment h2{
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  padding-top: 50px;
+  text-decoration: underline;
+}
+
+.about-commitment .grid1{
+  display: flex;
+  padding: 5px;
+} 
+
+.about-commitment .grid1 img{
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+}
+
+.about-commitment .grid1 ul li{
+  font-size: 25px;
+  padding-top: 30px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  text-align: start;
+  padding-left: 70px;
+}
+.about-commitments .grid1 ul
+{
+  padding-top: 50px;
+}
+
+/* signup */
+.main-box{
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.signup-form {
+  background-color: rgb(213, 213, 227);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+.signup-form h1 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: #333;
+  text-align: center;
+}
+.signup-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+.signup-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.signup-form input:focus {
+  border-color: rgb(86, 86, 237);
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+.signup-form .button{
+  width: 100%;
+  padding: 10px;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.signup-form .button:hover {
+  background-color: rgb(86, 86, 237);
+  color: white;
+}
+.signup-form h2 {
+  margin-bottom: 20px;
+  font-size: 10px;
+  color: #333;
+  text-align: center;
+}
+
+/* login */
+.login-box{
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login-form {
+  background-color: rgb(213, 213, 227);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+.login-form h1 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: #333;
+  text-align: center;
+}
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.login-form input:focus {
+  border-color: rgb(86, 86, 237);
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+.login-form .button{
+  width: 100%;
+  padding: 10px;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.login-form .button:hover {
+  background-color: rgb(86, 86, 237);
+  color: white;
+}
+
+
+
+
+
+
+ 
