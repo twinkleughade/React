@@ -7,7 +7,7 @@ const Header =()=>{
         <>
         <div className="navbar">
             <div className="logo">
-                <a href="#">Explore Essence</a>
+                <img src="logo.png" alt="" />
             </div>
             <ul>
             <li><Link to='/'>Home</Link></li>
@@ -29,7 +29,7 @@ const Footer=()=>{
         <>
         <footer>
             <article className="flogo">
-              <div>Explore Essence</div>
+              <img src="logo.png" alt="" />
             </article>
             
             <article className="follow">

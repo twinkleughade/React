@@ -6,6 +6,9 @@ import Login from './Login.jsx'
 import {Header,Footer} from './Layout'
 import { Route, Routes, useLocation } from "react-router-dom"
 import './App.css'
+import Booking from "./Booking.jsx"
+
+
 
 
 function App() {
@@ -14,7 +17,9 @@ function App() {
   let auth = local.pathname === '/signup' || local.pathname ==='/login'
 
   return (
+
     <>
+    
       {!auth && <Header/>}
       
       <Routes>
@@ -22,6 +27,7 @@ function App() {
         <Route path="/about" element={<About/>}/>
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/login" element={<Login/>}/>
+        <Route path="booking" element={<Booking />}/>
       </Routes>
 
       {!auth && <Footer/>}

@@ -1,0 +1,25 @@
+{
+  "student": [
+    {},
+    {
+      "id": "4751",
+      "name": "twinkle",
+      "email": "twinklethakre1998@gmail.com",
+      "age": "26",
+      "contact": "06267002715",
+      "city": "Betul",
+      "guest": "62",
+      "date": "2025-01-16"
+    },
+    {
+      "id": "fcdb",
+      "name": "",
+      "email": "",
+      "age": "",
+      "contact": "",
+      "city": "",
+      "guest": "",
+      "date": ""
+    }
+  ]
+}

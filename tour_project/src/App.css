@@ -67,12 +67,18 @@
   background-image: url(bg.avif);
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-position: center; */
   z-index: 1;
   position: relative;
 }
 .navbar .phonenav{
   display: none;
+}
+
+@media(max-width:1024px){  
+   .navbar ul li a{
+     margin: 50px;
+     font-size: 20px;
+   }   
 }
 
 @media(max-width:768px){
@@ -294,8 +300,133 @@
   margin-left: 350px;
   
 }
+.grid .card .card-body .price-btn{
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  padding: 5px;
+}
+.price{
+  display: block;
+  line-height: 25px;
+}
+.price-btn button{
+  font-size: 20px;
+  background-color: white;
+  font-weight: bold;
+  border: 1px solid gray;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+.price-btn button:hover{
+  color: white;
+  background-color: rgb(86, 86, 237);
+}
 
-footer .flogo div img{
+@media(max-width:1024px){
+  .grid .card{
+    margin: 5px;
+    padding: 5px 40px;
+  }
+  
+  .card-body{
+    display: block;
+    margin: 20px;
+  }
+
+  .card-body h5{
+    font-size: 40px;
+  }
+  .card-body p{
+    font-size: 18px;
+  }
+}
+
+@media(max-width:768px){
+  .grid .card{
+    margin: 5px;
+    padding: 5px 60px;
+  }
+  .grid .card img{
+    width: 250px;
+    height: 250px;
+  }
+  
+  .card-body{
+    margin: 10px;
+  }
+  .card-body h5{
+    font-size: 30px;
+  }
+  .card-body p{
+    font-size: 15px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+  
+  .grid .card .card-body .price-btn{
+    margin: 10px;
+  }
+  .price{
+    line-height: 20px;
+  }
+  .price-btn button{
+    font-size: 15px;
+    padding: 0 5px;
+    border-radius: 10px;
+  }
+}
+
+@media(max-width:426px){
+  .grid .card{
+    display: block;
+    margin: 5px;
+    padding: 5px 50px;
+  }
+  .grid .card img{
+    width: 300px;
+    height: 300px;
+  }
+  
+  .card-body{
+    display: block;
+    margin: 20px;
+  }
+  .card-body h5{
+    font-size: 30px;
+  }
+  .card-body p{
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .grid .card .card-body .price-btn{
+    margin: 15px;
+    padding: 5px;
+  }
+  .price{
+    display: block;
+    line-height: 20px;
+  }
+  .price-btn button{
+    font-size: 15px;
+    padding: 0 5px;
+  }
+  .price h3{
+    font-size: 18px;
+  }
+  
+}
+
+@media(max-width:426px){
+  .grid .card{
+    margin: 0px;
+    padding: 5px 18px;
+  }
+ 
+}
+
+footer .flogo img{
   width: 150px;
   height: 70px;
 }
@@ -330,6 +461,8 @@ footer .flogo{
   font-weight: bold;
   font-family: moderustic;
 }
+
+
 
 @media(max-width:768px){
 footer article div img{
@@ -490,6 +623,9 @@ footer article{
 .main-box{
   font-family: Arial, sans-serif;
   background-color: #f4f4f9;
+  background-image: url(signup.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
   padding: 0;
   display: flex;
@@ -559,6 +695,9 @@ footer article{
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-image: url(signup.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .login-form {
   background-color: rgb(213, 213, 227);
@@ -605,6 +744,61 @@ footer article{
   background-color: rgb(86, 86, 237);
   color: white;
 }
+
+/* -------------------              booking form   ---------------------------- */
+/* BookingForm.css */
+
+.booking-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 20px;
+  background: rgb(213, 213, 227);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+.booking-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.booking-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+.booking-form input{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.booking-form button{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  color: black;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.booking-form button:hover {
+  background-color: rgb(86, 86, 237);
+  color: white;
+}
+
+
+
 
 
 
