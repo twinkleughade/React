@@ -1,6 +1,5 @@
 {
   "student": [
-    {},
     {
       "id": "4751",
       "name": "twinkle",
@@ -10,16 +9,6 @@
       "city": "Betul",
       "guest": "62",
       "date": "2025-01-16"
-    },
-    {
-      "id": "fcdb",
-      "name": "",
-      "email": "",
-      "age": "",
-      "contact": "",
-      "city": "",
-      "guest": "",
-      "date": ""
     }
   ]
 }

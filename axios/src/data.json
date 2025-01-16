@@ -15,13 +15,6 @@
       "id": "dc60"
     },
     {
-      "name": "twink",
-      "age": 26,
-      "contact": 12334,
-      "city": "Bhopal",
-      "id": "b813"
-    },
-    {
       "id": "d72d",
       "name": "twinkle",
       "age": "26",
@@ -34,6 +27,13 @@
       "age": "26",
       "contact": "06267002715",
       "city": "Betul"
+    },
+    {
+      "id": "2a1f",
+      "name": "twinkle",
+      "age": "23",
+      "contact": "123",
+      "city": "betul"
     }
   ]
 }

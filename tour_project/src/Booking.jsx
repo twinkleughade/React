@@ -22,9 +22,7 @@ const Booking=()=>{
         axios.post('http://localhost:3000/student',frminp)
         .then(r=>alert("inserted"))
     }
-    
 
-   
 
     return(
         <>
@@ -56,10 +54,7 @@ const Booking=()=>{
             {/* <input type="submit" /> */}
             <button type="submit">Submit Booking</button>
         </form>
-        </div>
-
-        
-  
+        </div>      
 
         </>
     )

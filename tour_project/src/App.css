@@ -465,40 +465,51 @@ footer .flogo{
 
 
 @media(max-width:768px){
-footer article div img{
+footer article img{
   width: 100px;
   height: 100px;
 }
 
 }
-@media(max-width:425px){
-footer article div img{
-  display: none;
+
+@media(max-width:426px){
+  footer .flogo img{
+    width: 90px;
+    height: 40px;
+  }
+  
+  footer .address div a{
+  font-size: 13px;
+  }
+  
+  footer .follow div{
+  font-size: 13px;
+  }
+  
+  footer .address div{
+    font-size: 10px;
+  }
 }
-footer .address div a{
-  text-decoration: none;
-  color: black;
+
+@media(max-width:375px){
+  footer .flogo img{
+    width: 70px;
+    height: 30px;
+  }
+  
+  footer .address div a{
   font-size: 10px;
-  display: flex;
+  }
+  
+  footer .follow div{
+  font-size: 10px;
+  }
+  
+  footer .address div{
+    font-size: 8px;
+  }
 }
 
-footer .follow div a{
-  text-decoration: none;
-  color: black;
-  font-size: 9px;
- 
-}
-footer  article .follow div {
-  text-decoration: none;
-  color: black;
-  font-size: 9px;
-  display: flex;
-}
-
-footer article{
-  margin: 9px;
-}
-}
 
 /* /about */
 .about-page .about-header{
@@ -797,6 +808,98 @@ footer article{
   color: white;
 }
 
+/* ----------------edit -form  */
+
+.main_edit{
+  width: 300px;
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.main_edit label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+}
+
+.main_edit input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.main_edit input:focus{
+  border-color: #007bff;
+  outline: none;
+}
+
+.main_edit button {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.main_edit button:hover {
+  background-color: #0056b3;
+}
+
+.table{
+  max-width: 800px;
+  max-height: 100%;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: rgb(213, 213, 227);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.table thead th{
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+tbody tr td{
+  font-size: 15px;
+  text-align: center;
+  padding: 10px;
+}
+tbody tr td button{
+  width: 100%;
+  padding: 5px;
+  font-size: 12px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+tbody tr td button:hover {
+  background-color: #0056b3;
+}
 
 
 

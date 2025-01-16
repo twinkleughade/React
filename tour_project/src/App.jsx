@@ -7,6 +7,7 @@ import {Header,Footer} from './Layout'
 import { Route, Routes, useLocation } from "react-router-dom"
 import './App.css'
 import Booking from "./Booking.jsx"
+import Table from "./Table.jsx"
 
 
 
@@ -28,6 +29,8 @@ function App() {
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="booking" element={<Booking />}/>
+        <Route path="/table" element={<Table />}/>
+
       </Routes>
 
       {!auth && <Footer/>}

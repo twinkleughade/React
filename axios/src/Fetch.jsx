@@ -4,6 +4,14 @@ import React from "react";
 
 const Fetch=()=>{
     let[jsondata,setData]=useState([])
+    let[frmvisible,setFrmvisible]=useState(false)
+    let[editdata, setEditdata]=useState({})
+
+
+    function hinput(e){
+        let{name,value}=e.target;
+        setEditdata({...editdata,[name]:value})
+    }
 
     let[frminp,setFrminp]=useState({
         name:"",
@@ -47,6 +55,7 @@ const Fetch=()=>{
             <th>CONTACT</th>
             <th>CITY</th>
             <th>DELETE</th>
+            <th>Edit</th>
            </thead>
 
            <tbody>
@@ -59,11 +68,34 @@ const Fetch=()=>{
                         <td>{e.contact}</td>
                         <td>{e.city}</td>
                         <td><button onClick={()=>mydel(e.id)}>Delete</button></td>
+                        <td><button onClick={()=>{setFrmvisible(true),setEditdata(e)}}>Edit</button></td>
                     </tr>
                 ))
             }
            </tbody>
         </table>
+
+        {frmvisible && (
+            <form>
+                <label htmlFor="id">ID</label>
+                <input type="text" name="id" value={editdata.id} onChange={hinput} /><br /><br />
+
+                <label htmlFor="name">Name</label>
+                <input type="text" name="name" value={editdata.name} onChange={hinput} /><br /><br />
+
+                <label htmlFor="age">Age</label>
+                <input type="text" name="age" value={editdata.age} onChange={hinput} /><br /><br />
+
+                <label htmlFor="contact">Contact</label>
+                <input type="text" name="contact" value={editdata.contact} onChange={hinput} /> <br /><br />
+
+                <label htmlFor="city">City</label>
+                <input type="text" name="city" value={editdata.city} onChange={hinput} /><br /><br />
+
+                <input type="submit" />
+
+            </form>
+        )}
 
         <form onSubmit={submitform}>
             <label htmlFor="name">Name</label>
