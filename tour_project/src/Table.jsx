@@ -16,6 +16,12 @@ const Table =()=>{
             axios.delete(`http://localhost:3000/student/${id}`)
             .then(re=>alert("deleted"))
         }
+
+        function finalsubit(e){
+            e.preventDefault();    
+            axios.put(`http://localhost:3000/student/${editdata.id}`,editdata)
+            .then(r=>alert("successfully updated"))
+        }
     
         useEffect(()=>{
             axios.get('http://localhost:3000/student')
@@ -54,7 +60,9 @@ const Table =()=>{
                         <td>{e.guest}</td>
                         <td>{e.date}</td>
                         <td><button onClick={()=>mydel(e.id)}>Delete</button></td>
-                        <td><button onClick={()=>{setFrmvisible(true),setEditdata(e)}}>Edit</button></td>
+                        {/* <td><button onClick={()=>{setFrmvisible(true),setEditdata(e)}}>Edit</button></td> */}
+                        <td><button onClick={()=>{setFrmvisible(!frmvisible),setEditdata(e)}}>Edit</button></td>
+
                     </tr>
                 ))
             }
@@ -63,10 +71,10 @@ const Table =()=>{
 
         {frmvisible && (
             
-            <div className="main_edit">
+            <div className="main_edit" onSubmit={finalsubit}>
                 <form className="edit-form">
                 <label htmlFor="id">ID</label>
-                <input type="text" name="id" value={editdata.id} onChange={hinput} /><br /><br />
+                <input type="text" name="id" value={editdata.id} onChange={hinput} readOnly/><br /><br />
 
                 <label htmlFor="name">Name</label>
                 <input type="text" name="name" value={editdata.name} onChange={hinput} /><br /><br />

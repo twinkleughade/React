@@ -36,6 +36,12 @@ const Fetch=()=>{
         .then(re=>alert("deleted"))
     }
 
+    function finalsubmit(e){
+        e.preventDefault();
+        axios.put(`http://localhost:3000/student/${editdata.id}`,editdata)
+        .then(r=>alert("updated"))
+    }
+
     useEffect(()=>{
         axios.get('http://localhost:3000/student')
         .then(res=>{
@@ -76,7 +82,7 @@ const Fetch=()=>{
         </table>
 
         {frmvisible && (
-            <form>
+            <form onSubmit={finalsubmit}>
                 <label htmlFor="id">ID</label>
                 <input type="text" name="id" value={editdata.id} onChange={hinput} /><br /><br />
 

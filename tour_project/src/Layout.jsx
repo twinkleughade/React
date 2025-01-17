@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const Header =()=>{
     return(
         <>
+        <input type="checkbox" id="input1" hidden></input>
         <div className="navbar">
             <div className="logo">
                 <img src="logo.png" alt="" />
@@ -16,11 +17,30 @@ const Header =()=>{
                 <li><Link to='/login'>Login</Link></li> 
                 <li><Link to='/table'>Detail</Link></li> 
             </ul>
-
-            <div className='bar'>
-                <a href="#"><i className="fa-solid fa-bars"></i></a>
-            </div>
         </div>
+          {/* ==================small nav ================= */}
+
+        <section id="smallnav">
+            <div className="logo1">
+                <img src="logo.png" alt="" />
+            </div>
+            <article>
+                <div className='bar'><label for="input1"><i class="fa-solid fa-bars"></i></label></div>
+            </article>
+        </section>
+
+ 
+
+        <section id="shownav">
+        <ul>
+            <li><Link to='/' >Home</Link></li>
+                <li><Link to='/about'>About</Link></li>
+                <li><Link to='/signup'>Sign up</Link></li>
+                <li><Link to='/login'>Login</Link></li> 
+                <li><Link to='/table'>Detail</Link></li> 
+            </ul>
+
+        </section>
         </>
     )
 }

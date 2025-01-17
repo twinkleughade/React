@@ -29,7 +29,7 @@
  font-style: initial;
 }
 
-.navbar div img{
+.navbar .logo img{
   width: 150px;
   height: 70px;
 }
@@ -52,31 +52,84 @@
   font-weight: bold;
   color: black;       
 }
-.navbar .bar a i{
+
+/* ----------------------------------mobile small nav ------------------------------------ */
+#smallnav{
+  display: none;
+  justify-content: space-between;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+}
+
+#smallnav .logo1 img{
+  width: 90px;
+  height: 50px;
+}
+#smallnav article div label i{
   font-size: 20px;
   border: 1px solid black;
   padding: 5px;
   transition: .6s;
-  display: none;
-} 
+}
+
+#shownav{
+  height: 50vh;
+  width: 150px;
+  background-color: white;
+  position: absolute;
+  top: 0px;
+  left: -400px; 
+  z-index:2; 
+}
+
+#shownav ul{
+  margin: 20px;
+  align-items: center;
+}
+
+#shownav ul li{
+  padding: 5px;
+  padding-top: 20px;
+}
+
+#shownav ul li a{
+  padding: 5px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
 
 
-.header1{
-  min-height: 100vh;
-  width: 100%;
-  background-image: url(bg.avif);
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 1;
-  position: relative;
+@media(max-width:426px){
+  .navbar{
+      display: none;
+  }
+  #smallnav{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 50px 10px 50px;
+  }
+
+  #smallnav article div i{
+      font-size: 20px;
+      border: 2px solid black;
+      border-radius: 5px;
+      padding: 10px;
+  }
+
+  #input1:checked ~ #shownav{
+      left: 0px;
+      transition: left 2s;
+  }
 }
-.navbar .phonenav{
-  display: none;
-}
+
+
 
 @media(max-width:1024px){  
    .navbar ul li a{
-     margin: 50px;
+     margin: 40px;
      font-size: 20px;
    }   
 }
@@ -86,345 +139,18 @@
       display: block;
   }
   .navbar ul{
-      display: none;    
+      display: flex;    
   }
-}
-
-
-
-.header1{
-  height: 80vh !important;
-  align-items: center;
-  justify-content: center !important;
-}
-
-.hcontainer{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-  padding-top: 130px;
-  padding-left: 400px;
-  width: 1100px;
-}
-
-.hcontainer h1{
-  font-size: 42px;
-  color: white;
-  line-height: 40px;
-}
-
-.hcontainer small{
-  color: black;
-  font-size: 20px;
-}
-
-.hcontainer form{
-  padding: 5px 45px;
-  background-color: white;
-  border-radius: 60px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.hcontainer form .headinp{
-  width: 100%;
-  display: flex;
-  flex-direction: column; 
-  gap: 5px; 
-  padding: 0 10px; 
-}
-
-.hcontainer form .headinp:nth-child(2){
-      border-right: 0.2px solid black;
-      border-left: 0.2px solid black;
-  }
-
-.hcontainer .headinp label{
-  font-size: 15px;
-}
-.hcontainer .headinp input{
-  height: 20px;
-  border: none;
-  outline: none;
-  color: rgb(16, 16, 36);
-}
-
-.hcontainer button{
-  background-color:white !important;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 15px 10px;
-  margin-left: 30px;
-  border-radius: 60px;
-  cursor: pointer;
-  color: black;
-  transition: .6s;
-  border: none;
-}
-.hcontainer button:hover{
-  background-color: black !important;
-  color: white;
-}
-
-@media(max-width:1024px){
-  .hcontainer{
-      gap: 20px;
-      padding-top: 150px;
-      padding-left: 250px;
-      width: 830px;
-   }
-}
-@media(max-width:768px){
-  .hcontainer{
-      padding-top: 130px;
-      padding-left: 100px;
-      width: 650px;
-   }
-}
-@media(max-width:426px){
-   .hcontainer form{
-      flex-direction: column;
-      border-radius: 12px;
-      margin-top: 20px;
-      padding: 15px 25px;
-      background-color: white;
-      border-radius: 60px;
-      width: 100%;
-   }
-   .hcontainer button{
-      width: 100%;
-      justify-content: center;
-   }
-   .hcontainer form .headinp:nth-child(2){
-      border: none;
-  }
-  .hcontainer{
-      flex-direction: column;
-      gap: 20px;
-      justify-content: center;
-      padding-top: 80px;
-      padding-left: 75px;
-      width: 350px;
-   }
-   .hcontainer h1{
-      font-size: 25px;
-      line-height: 20px;
-   }
-  
-   .hcontainer small{
-      font-size: 15px;
-   }
-
-}
-
-@media(max-width:426px){
-
-  .navbar div a{
-      font-size: 20px;
-   }
-   .navbar{
-      padding: 0 40px;
-  }
-  .hcontainer form{
-     margin-top: 20px;
-     padding: 10px 20px;
-     border-radius: 40px;
-  }
- .hcontainer{
-     gap: 10px;
-     padding-top: 80px;
-     padding-left: 45px;
-     width: 300px;
-  }
-  .hcontainer h1{
-     font-size: 20px;
-     line-height: 15px;
-  }
- 
-  .hcontainer small{
-     font-size: 15px;
-  }
-
-}
-
-.section_heading{
-  display: flex;
-  justify-content: space-between;
-}
-
-.grid{
-  display: grid;
-  grid-template-columns: auto;
-}
-.grid .card{
-  display: flex;
-  margin: 20px;
-  padding: 10px 80px;
-}
-.grid .card img{
-  width: 400px;
-  height: 400px;
-}
-
-
-.card-body{
-  display: block;
-  margin: 50px;
-}
-.card-body h5{
-  font-size: 40px;
-  color: black;
-  text-align: center;
-}
-.card-body p{
-  font-size: 20px;
-  color: black;
-  text-align: center;
-  font-family: sans-serif;
-  margin-bottom: 30px;
-  margin-top: 30px;
-}
-.card-body a{
-  font-size: 20px;
-  color: black;
-  text-align: center;
-  border: 1px solid grey;
-  text-decoration: none;
-  font-weight: 500;
-  border-radius: 60px;
-  padding: 5px;
-  margin-left: 350px;
-  
-}
-.grid .card .card-body .price-btn{
-  display: flex;
-  justify-content: space-between;
-  margin: 30px;
-  padding: 5px;
-}
-.price{
-  display: block;
-  line-height: 25px;
-}
-.price-btn button{
-  font-size: 20px;
-  background-color: white;
-  font-weight: bold;
-  border: 1px solid gray;
-  padding: 0 10px;
-  border-radius: 10px;
-}
-.price-btn button:hover{
-  color: white;
-  background-color: rgb(86, 86, 237);
-}
-
-@media(max-width:1024px){
-  .grid .card{
-    margin: 5px;
-    padding: 5px 40px;
-  }
-  
-  .card-body{
-    display: block;
+  .navbar ul li a{
     margin: 20px;
-  }
-
-  .card-body h5{
-    font-size: 40px;
-  }
-  .card-body p{
-    font-size: 18px;
+    font-size: 15px;
+  }   
+  .navbar .logo img{
+    width: 100px;
+    height: 50px;
   }
 }
 
-@media(max-width:768px){
-  .grid .card{
-    margin: 5px;
-    padding: 5px 60px;
-  }
-  .grid .card img{
-    width: 250px;
-    height: 250px;
-  }
-  
-  .card-body{
-    margin: 10px;
-  }
-  .card-body h5{
-    font-size: 30px;
-  }
-  .card-body p{
-    font-size: 15px;
-    margin-bottom: 5px;
-    margin-top: 10px;
-  }
-  
-  .grid .card .card-body .price-btn{
-    margin: 10px;
-  }
-  .price{
-    line-height: 20px;
-  }
-  .price-btn button{
-    font-size: 15px;
-    padding: 0 5px;
-    border-radius: 10px;
-  }
-}
-
-@media(max-width:426px){
-  .grid .card{
-    display: block;
-    margin: 5px;
-    padding: 5px 50px;
-  }
-  .grid .card img{
-    width: 300px;
-    height: 300px;
-  }
-  
-  .card-body{
-    display: block;
-    margin: 20px;
-  }
-  .card-body h5{
-    font-size: 30px;
-  }
-  .card-body p{
-    font-size: 15px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-  }
-  .grid .card .card-body .price-btn{
-    margin: 15px;
-    padding: 5px;
-  }
-  .price{
-    display: block;
-    line-height: 20px;
-  }
-  .price-btn button{
-    font-size: 15px;
-    padding: 0 5px;
-  }
-  .price h3{
-    font-size: 18px;
-  }
-  
-}
-
-@media(max-width:426px){
-  .grid .card{
-    margin: 0px;
-    padding: 5px 18px;
-  }
- 
-}
 
 footer .flogo img{
   width: 150px;
@@ -511,401 +237,8 @@ footer article img{
 }
 
 
-/* /about */
-.about-page .about-header{
-  padding: 30px;
-  background-image: url(about.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.about-page .about-header h1{
-  font-size: 40px;
-  font-weight: bold;
-  text-align: center;
-  color: white;
-}
-
-.about-page .about-header p{
-  font-size: 25px;
-  text-align: center;
-  font-family: sans-serif;
-  padding: 15px;
-  color: white;
-}
-
-.about-story h2{
-  font-size: 35px;
-  font-weight: bold;
-  text-align: center;
-  color: black;
-  padding-top: 50px;
-  text-decoration: underline;
-}
-
-.about-story .grid1{
-  display: flex;
-  padding: 5px;
-}
-
-.about-story .grid1 img{
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-}
-
-.about-story .grid1 p{
-  font-size: 30px;
-  padding-top: 90px;
-  align-items: center;
-  text-align: center;
-  padding-left: 70px;
-}
-
-.about-offerings h2{
-  font-size: 35px;
-  font-weight: bold;
-  text-align: center;
-  color: black;
-  padding-top: 50px;
-  text-decoration: underline;
-}
-
-.about-offerings .grid1{
-  display: flex;
-  padding: 5px;
-} 
-
-.about-offerings .grid1 img{
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-}
-
-.about-offerings .grid1 ul li{
-  font-size: 25px;
-  padding-top: 30px;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  text-align: start;
-  padding-left: 70px;
-}
-.about-offerings .grid1 ul
-{
-  padding-top: 50px;
-}
-
-.about-commitment h2{
-  font-size: 35px;
-  font-weight: bold;
-  text-align: center;
-  color: black;
-  padding-top: 50px;
-  text-decoration: underline;
-}
-
-.about-commitment .grid1{
-  display: flex;
-  padding: 5px;
-} 
-
-.about-commitment .grid1 img{
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-}
-
-.about-commitment .grid1 ul li{
-  font-size: 25px;
-  padding-top: 30px;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  text-align: start;
-  padding-left: 70px;
-}
-.about-commitments .grid1 ul
-{
-  padding-top: 50px;
-}
-
-/* signup */
-.main-box{
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  background-image: url(signup.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-.signup-form {
-  background-color: rgb(213, 213, 227);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 400px;
-}
-.signup-form h1 {
-  margin-bottom: 20px;
-  font-size: 30px;
-  color: #333;
-  text-align: center;
-}
-.signup-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #555;
-}
-.signup-form input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-}
-.signup-form input:focus {
-  border-color: rgb(86, 86, 237);
-  outline: none;
-  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
-}
-.signup-form .button{
-  width: 100%;
-  padding: 10px;
-  color: black;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-}
-.signup-form .button:hover {
-  background-color: rgb(86, 86, 237);
-  color: white;
-}
-.signup-form h2 {
-  margin-bottom: 20px;
-  font-size: 10px;
-  color: #333;
-  text-align: center;
-}
-
-/* login */
-.login-box{
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-image: url(signup.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.login-form {
-  background-color: rgb(213, 213, 227);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 400px;
-}
-.login-form h1 {
-  margin-bottom: 20px;
-  font-size: 30px;
-  color: #333;
-  text-align: center;
-}
-.login-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #555;
-}
-.login-form input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-}
-.login-form input:focus {
-  border-color: rgb(86, 86, 237);
-  outline: none;
-  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
-}
-.login-form .button{
-  width: 100%;
-  padding: 10px;
-  color: black;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-}
-.login-form .button:hover {
-  background-color: rgb(86, 86, 237);
-  color: white;
-}
-
-/* -------------------              booking form   ---------------------------- */
-/* BookingForm.css */
-
-.booking-form-container {
-  max-width: 600px;
-  margin: 0 auto;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  padding: 20px;
-  background: rgb(213, 213, 227);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  
-}
-
-.booking-form-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.booking-form label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: #555;
-}
-
-.booking-form input{
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.booking-form button{
-  display: block;
-  width: 100%;
-  padding: 10px;
-  color: black;
-  font-size: 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.booking-form button:hover {
-  background-color: rgb(86, 86, 237);
-  color: white;
-}
-
-/* ----------------edit -form  */
-
-.main_edit{
-  width: 300px;
-  max-width: 300px;
-  margin: 10px auto;
-  padding: 10px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
-}
-
-.main_edit label {
-  display: block;
-  margin-bottom: 4px;
-  font-size: 12px;
-  font-weight: bold;
-  color: #333;
-}
-
-.main_edit input {
-  width: 100%;
-  padding: 5px;
-  margin-bottom: 5px;
-  font-size: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #fff;
-  box-sizing: border-box;
-  transition: border-color 0.3s ease;
-}
-
-.main_edit input:focus{
-  border-color: #007bff;
-  outline: none;
-}
-
-.main_edit button {
-  width: 100%;
-  padding: 5px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.main_edit button:hover {
-  background-color: #0056b3;
-}
-
-.table{
-  max-width: 800px;
-  max-height: 100%;
-  margin: 0 auto;
-  margin-top: 15px;
-  margin-bottom: 25px;
-  padding: 20px;
-  background: rgb(213, 213, 227);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.table thead th{
-  font-size: 20px;
-  text-align: center;
-  padding: 20px;
-  margin: 20px;
-}
-
-tbody tr td{
-  font-size: 15px;
-  text-align: center;
-  padding: 10px;
-}
-tbody tr td button{
-  width: 100%;
-  padding: 5px;
-  font-size: 12px;
-  background-color: #007bff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-tbody tr td button:hover {
-  background-color: #0056b3;
-}
 
 
 
 
 
-
-
-
- 

@@ -6,6 +6,12 @@ import Login from './Login.jsx'
 import {Header,Footer} from './Layout'
 import { Route, Routes, useLocation } from "react-router-dom"
 import './App.css'
+import './home.css'
+import './about.css'
+import './signup.css'
+import './login.css'
+import './booking.css'
+import './table.css'
 import Booking from "./Booking.jsx"
 import Table from "./Table.jsx"
 
